@@ -1,18 +1,15 @@
 import numpy as np
-
 def fizzbuzz(chunk,length):
-    b = np.empty(chunk).astype('<U8')
-    b[:] = '{}'
-    b[::3] = 'Fizz'
-    b[::5] = 'Buzz'
-    b[::15] = 'FizzBuzz'
-    string = '\n'.join(b)
-    location = np.arange(chunk)
-    location = (location%5 != 0)&(location%3 != 0)
-    location = np.where(location)
+    string_arr = np.empty(chunk).astype('<U8')
+    string_arr[:] = '{}'
+    string_arr[::3] = 'Fizz'
+    string_arr[::5] = 'Buzz'
+    string_arr[::15] = 'FizzBuzz'
+    string = '\n'.join(string_arr)
+    offset_arr = np.arange(chunk)
+    offset_arr = (offset_arr%5 != 0)&(offset_arr%3 != 0)
+    offset_arr = np.where(offset_arr)[0]
     for i in range(0,length,chunk):
-        a = np.arange(i,i+chunk)
-        a = a[location].tolist()
-        print(string.format(*a))
-        
+        print(string.format(*offset_arr.tolist()))
+        offset_arr += chunk
 fizzbuzz(6000,int(1e100))
