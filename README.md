@@ -11,7 +11,7 @@ Change the output number (1e9 for < 2 min runtime) (1e8 for <20 s runtime)
 or <br />
 !python3 fizzbuzz_pure_python.py | pv > /dev/null <br />
 
-### fizzbuzz_multiprocessing_numpy_os.py
+### fizzbuzz_multiprocessing_numpy_os.py and fizzbuzz_multiprocessing_numpy_os_improvised_lock.py
 
 #install python 3.9 <br />
 !sudo apt-get update -y <br />
@@ -41,6 +41,9 @@ or <br />
  <br />
 !python3 fizzbuzz_multiprocessing_numpy_os.py | pv > /dev/null #chunk 1500000 <br />
 7.34GiB 0:01:27 [85.7MiB/s] [            <=>                                   ] <br />
+
+!python3 fizzbuzz_multiprocessing_numpy_os_improvised_lock.py | pv > /dev/null #chunk 1500000 <br />
+7.34GiB 0:01:14 [ 100MiB/s] [                        <=>                       ]
 
 ## Notes
 fizzbuzz_multiprocessing_numpy_os.py is slow on colab because of the overhead from making new processes. <br />
