@@ -1,6 +1,6 @@
 # Fast-FizzBuzz-python
 
-For https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/
+For https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/. Do check out the awesome submissions by others and the benchmark code is here if you want to run it on your machine https://github.com/omertuc/fizzgolf.
 
 ## Usage on google colab
 Change the output number (1e9 for < 2 min runtime) (1e8 for <20 s runtime)
