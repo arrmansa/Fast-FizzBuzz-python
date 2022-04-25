@@ -32,14 +32,14 @@ or <br />
 !apt-get install pv <br />
 !python3 fizzbuzz_multiprocessing_numpy_os.py | pv > /dev/null <br />
 
-## Performance on google collab with chunk-6000, length-1e9
-!python3 fizzbuzz_numpy_os.py | pv > /dev/null <br />
+## Performance on google collab, length = int(1e9)
+!python3 fizzbuzz_numpy_os.py | pv > /dev/null #chunk 8100<br />
 7.33GiB 0:00:59 [ 125MiB/s] [                                     <=>          ] <br />
 <br />
-!python3 fizzbuzz_pure_python.py | pv > /dev/null <br />
+!python3 fizzbuzz_pure_python.py | pv > /dev/null #chunk 6000<br />
 7.33GiB 0:01:25 [87.5MiB/s] [             <=>                                  ] <br />
  <br />
-!python3 fizzbuzz_multiprocessing_numpy_os.py | pv > /dev/null <br />
+!python3 fizzbuzz_multiprocessing_numpy_os.py | pv > /dev/null #chunk 1500000 <br />
 7.34GiB 0:01:27 [85.7MiB/s] [            <=>                                   ] <br />
 
 ## Notes
