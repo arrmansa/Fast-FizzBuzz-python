@@ -6,15 +6,15 @@ For https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buz
 Change the output number (1e9 for < 2 min runtime) (1e8 for <20 s runtime)
 
 ### fizzbuzz_numpy_os.py and fizzbuzz_pure_python.py
-!apt-get install pv
-!python3 fizzbuzz_numpy_os.py | pv > /dev/null
-or
-!python3 fizzbuzz_pure_python.py | pv > /dev/null
+!apt-get install pv \n
+!python3 fizzbuzz_numpy_os.py | pv > /dev/null \n
+or \n
+!python3 fizzbuzz_pure_python.py | pv > /dev/null \n
 
 ### fizzbuzz_multiprocessing_numpy_os.py
 
-#install python 3.9
-!sudo apt-get update -y
+#install python 3.9 \n
+!sudo apt-get update -y \n
 !sudo apt-get install python3.9
 
 #change alternatives
