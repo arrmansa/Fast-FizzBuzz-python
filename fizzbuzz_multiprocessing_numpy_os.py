@@ -72,4 +72,4 @@ def fizzbuzz(chunk,length,number_processes):
     arraymemory.close()
     arraymemory.unlink()
 
-fizzbuzz(750000,int(1e100),32)
+fizzbuzz(1500000,int(1e100),32)
