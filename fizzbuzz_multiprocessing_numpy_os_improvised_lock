@@ -52,6 +52,7 @@ def fizzbuzz(chunk,length,number_processes):
     temp = np.ndarray(offset_arr.shape, dtype=offset_arr.dtype, buffer=arraymemory.buf)
     temp[:] = offset_arr[:]
 
+    #Improvised Lock
     lock = shared_memory.SharedMemory(create=True, size=1)
     lock.buf[0:] = '0'.encode()
 
@@ -85,4 +86,4 @@ def fizzbuzz(chunk,length,number_processes):
     lock.close()
     lock.unlink()
 
-fizzbuzz(1500000,int(1e9),8)
+fizzbuzz(7500000,int(1e9),8)
