@@ -41,7 +41,7 @@ or
 7.33GiB 0:01:25 [87.5MiB/s] [             <=>                                  ]
 
 !python3 fizzbuzz_multiprocessing_numpy_os.py | pv > /dev/null
-7.34GiB 0:01:36 [77.7MiB/s] [  <=>                                             ]
+7.34GiB 0:01:27 [85.7MiB/s] [            <=>                                   ]
 
 ## Notes
 fizzbuzz_multiprocessing_numpy_os.py is slow on colab because of the overhead from making new processes.
